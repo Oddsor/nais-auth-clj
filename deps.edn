@@ -1,0 +1,10 @@
+{:paths ["src"]
+ :deps {org.bitbucket.b_c/jose4j {:mvn/version "0.9.6"}
+        org.babashka/http-client {:mvn/version "0.4.22"}
+        com.cnuernber/charred {:mvn/version "1.034"}}
+ :aliases {:dev {:extra-deps {metosin/reitit-ring {:mvn/version "0.7.2"}
+                              no.nav.security/mock-oauth2-server {:mvn/version "2.1.10"}}}
+           :kaocha {:extra-deps {lambdaisland/kaocha {:mvn/version "1.91.1392"}
+                                 metosin/reitit-ring {:mvn/version "0.7.2"}
+                                 no.nav.security/mock-oauth2-server {:mvn/version "2.1.10"}}
+                    :main-opts ["-m" "kaocha.runner"]}}}
